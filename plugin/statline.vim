@@ -111,7 +111,7 @@ set statusline+=%=
 " ---- current line and column ----
 
 " (-:left align, 14:minwid, l:line, L:nLines, c:column)
-set statusline+=%-14(\ L%l/%L:C%c\ %)
+set statusline+=%-14(\ %l/%L:%c\ %)
 
 
 " ----  scroll percent ----
@@ -160,7 +160,7 @@ if !exists('g:statline_fugitive')
     let g:statline_fugitive = 0
 endif
 if g:statline_fugitive
-    set statusline+=%4*%{exists('g:loaded_fugitive')?fugitive#statusline():''}%*
+    set statusline+=\ %4*%{exists('g:loaded_fugitive')?fugitive#statusline():''}%*
 endif
 
 
